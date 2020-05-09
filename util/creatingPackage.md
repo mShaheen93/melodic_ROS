@@ -30,34 +30,40 @@
         camkelist
         package.xml
 
+=====================================
 
 After Adding new Package (robot_tutorial)
 We need to build the whole workspace
 
 
     cd ..
-    ctkin_make
+    catkin_make
 
 
 Find Package
+    
     rospack find robot_tutorial
 
 To make the package visible
+    
     change dir to devel & run setup.bash
 
 
 To go to package location use **roscd**
+    
     roscd robot_tutorial
 
 To list package use **rosls**
+    
     rosls robot_tutorial
 
 To see logs of package use **roslog**
+    
     roscd log
 
 Open Package xml under package dir
 
-
+==============================================
 
 ## XML Package
     Format
@@ -73,17 +79,20 @@ Open Package xml under package dir
 ## cmake vs catkin_make
 
 *Go to workspace dir (wallE_ws)*
+    
     mkdir build
     cd build
     
     cmake ../src
     make   
-    *This dowsn"t create devel dir*
+    *This doesn"t create devel dir*
 
-*We need to use catkin_make*  Option1
+Option1 *We need to use cmake with build options*  
+    
     cmake ../src/ -DCMAKE_INSTALL_PREFIX=../install -DCATKIN_DEVL_PREFIX=../devel
 
-*We need to use catkin_make*  Option2
+Option2 *We need to use catkin_make* 
+    
     catkin_make
 
 
