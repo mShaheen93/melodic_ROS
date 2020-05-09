@@ -105,6 +105,7 @@ Option2 *We need to use catkin_make*
 
 ## Run Package node 
     After sourcing your workspace
+    **This is local to the Terminal**
     go to ws dir
     source devel/setup.bash
 
@@ -113,6 +114,12 @@ Option2 *We need to use catkin_make*
 
 
     rosrun robot_tutorial walle_hello_node
+
+
+## Adding CMake Project
+
+You can"t add another CMake Project(with executables) directly
+You need to create a node then add the executables (from CmakeList) needed for this node  to the CMakeListst of the node
 
 
 CHeck this example
