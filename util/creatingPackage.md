@@ -67,3 +67,44 @@ Open Package xml under package dir
     build depend
     build export depend
     exec depend
+
+
+
+## cmake vs catkin_make
+
+*Go to workspace dir (wallE_ws)*
+    mkdir build
+    cd build
+    
+    cmake ../src
+    make   
+    *This dowsn"t create devel dir*
+
+*We need to use catkin_make*  Option1
+    cmake ../src/ -DCMAKE_INSTALL_PREFIX=../install -DCATKIN_DEVL_PREFIX=../devel
+
+*We need to use catkin_make*  Option2
+    catkin_make
+
+
+
+## Add executable for CMake
+
+    under package add src folder with it"s cmakelist
+
+    change makelist.txt of package & add executable
+
+## Run Package node 
+    After sourcing your workspace
+    got to ws dir
+    source devel/setup.bash
+
+
+    now you can run it from anywhere    
+
+
+    rosrun robot_tutorial walle_hello_node
+
+
+CHeck this example
+    https://cliutils.gitlab.io/modern-cmake/chapters/basics/structure.html
