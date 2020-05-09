@@ -105,7 +105,7 @@ Option2 *We need to use catkin_make*
 
 ## Run Package node 
     After sourcing your workspace
-    got to ws dir
+    go to ws dir
     source devel/setup.bash
 
 
